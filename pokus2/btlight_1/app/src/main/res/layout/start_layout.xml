@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack" >
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line"
+        android:background="@color/colorBlack"
+        app:srcCompat="@drawable/ic_light_bulb_off" />
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:divider="@drawable/divider"
+        android:showDividers="middle"
+        android:background="@color/colorSlightWhite"
+        android:layout_above="@id/text"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:elevation="1dp"
+        android:id="@+id/setup"
+        android:layout_above="@id/line"
+        android:background="@color/colorBlack">
+
+        <TextView
+            android:id="@+id/setuptitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Setup"
+            android:padding="20px"
+            android:gravity="center"
+            android:textSize="80px"
+            android:textColor="@color/colorWhite" />
+        <View
+            android:id="@+id/line2"
+            android:layout_width="fill_parent"
+            android:layout_height="8px"
+            android:divider="@drawable/divider"
+            android:showDividers="middle"
+            android:background="@color/colorSlightWhite"
+            android:layout_below="@id/setuptitle"/>
+        <ListView
+            android:id="@+id/setuplist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:divider="@color/colorWhite"
+            android:dividerHeight="2px"
+            android:layout_below="@id/setuptitle"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/debug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:background="#00000000"
+        android:elevation="2dp"
+        android:visibility="visible"
+        android:textSize="30px"
+        android:layout_above="@id/line"
+        android:scrollbars = "vertical"
+        android:textColor="@color/colorWhite"/>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorSlightBlack"
+        android:fontFamily="@font/library_3_am"
+        android:gravity="center"
+        android:text="@string/footer"
+        android:textAlignment="center"
+        android:textColor="@color/colorSlightWhite" />
+    <!-- More GUI components go here  -->
+
+</RelativeLayout>
